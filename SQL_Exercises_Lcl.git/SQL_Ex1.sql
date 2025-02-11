@@ -21,4 +21,6 @@ SELECT 1 FROM DUAL;
 select * from (
 select product_name, sales, lag(sales) over (order by sales ) as next_salary
 from sales_data) a 
-where rownum<=2; -- This is new line
+where rownum<=2;
+
+select * from sales_data where  regexp_like (Category,'[1-1]');
